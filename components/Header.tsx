@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Heart } from 'lucide-react';
+import Logo from './Logo';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,12 +31,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-xl overflow-hidden shadow-sm">
-            <img 
-              src="https://www.cambiatumente.org/images/156/23993228/Gemini_Generated_Image_1m34l81m34l81m34-j2FU397v90IMEQXrmoVYgA.webp" 
-              alt="Logo Fundación Cambia tu Mente" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
+            <Logo />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold tracking-tight text-brand-primary leading-none">

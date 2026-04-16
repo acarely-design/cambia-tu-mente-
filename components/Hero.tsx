@@ -46,11 +46,11 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="relative animate-fade-in delay-200">
-          <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl aspect-square bg-white p-8">
+          <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl aspect-square">
             <img 
-              src="https://www.cambiatumente.org/images/156/23993228/Gemini_Generated_Image_1m34l81m34l81m34-j2FU397v90IMEQXrmoVYgA.webp" 
-              alt="Fundación Cambia tu Mente" 
-              className="w-full h-full object-contain"
+              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop" 
+              alt="Manos en señal de apoyo" 
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
           </div>

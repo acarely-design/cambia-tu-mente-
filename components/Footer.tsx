@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Heart, Mail, Phone, MapPin, Instagram, Twitter, Facebook, Linkedin } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -40,13 +41,8 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl overflow-hidden bg-white p-1">
-                <img 
-                  src="https://www.cambiatumente.org/images/156/23993228/Gemini_Generated_Image_1m34l81m34l81m34-j2FU397v90IMEQXrmoVYgA.webp" 
-                  alt="Logo Fundación Cambia tu Mente" 
-                  className="w-full h-full object-contain"
-                  referrerPolicy="no-referrer"
-                />
+              <div className="w-12 h-12 rounded-xl overflow-hidden bg-white">
+                <Logo />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg font-bold tracking-tight text-white leading-none">

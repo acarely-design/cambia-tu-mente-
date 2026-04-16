@@ -38,10 +38,6 @@ const About: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-brand-primary text-white p-8 rounded-2xl shadow-xl max-w-[240px]">
-              <p className="text-3xl font-bold mb-1">10k+</p>
-              <p className="text-sm opacity-90">Vidas impactadas positivamente a través de nuestros programas.</p>
-            </div>
           </div>
 
           <div className="space-y-6">
