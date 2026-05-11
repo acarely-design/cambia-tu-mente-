@@ -32,30 +32,43 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="rounded-[32px] overflow-hidden shadow-xl aspect-[4/3]">
               <img 
-                src="https://picsum.photos/seed/community/800/600" 
-                alt="Nuestra Comunidad" 
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=60&w=800&fm=webp&auto=format&fit=crop"
+                srcSet="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=60&w=400&fm=webp&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1521791136064-7986c2920216?q=60&w=800&fm=webp&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1521791136064-7986c2920216?q=60&w=1200&fm=webp&auto=format&fit=crop 1200w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Grupos de apoyo y terapia grupal" 
+                width="800"
+                height="600"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </div>
           </div>
 
           <div className="space-y-6">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-brand-accent">Sobre Nosotros</h2>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold text-brand-primary leading-tight">
-              Nuestra Misión es tu <span className="italic">Bienestar</span>
-            </h3>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              La Fundación Cambia tu Mente nació de la necesidad de democratizar el acceso a herramientas de salud mental y bienestar emocional. Somos una organización comprometida con la transformación social a través del individuo, ofreciendo servicios con arancel social.
+            <span className="text-sm font-bold uppercase tracking-widest text-brand-accent block mb-2">Nuestra Historia y Propósito</span>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-primary leading-tight">
+              Nuestra Misión es tu <span className="italic">Bienestar Mental</span>
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              La <strong>Fundación Cambia tu Mente</strong> es un organismo sin fines de lucro cuyo objetivo fundamental es democratizar y facilitar el acceso a la atención psicológica y recursos de salud mental. Ofrecemos nuestros distintos programas clínicos con un modelo de <strong>arancel social</strong>, garantizando que el factor económico no sea una barrera para recibir tratamiento clínico profesional.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Creemos que una mente sana es la base de una sociedad próspera. Por eso, trabajamos incansablemente para eliminar el estigma y proporcionar apoyo real a quienes más lo necesitan.
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Trabajamos incansablemente para promover la psicoeducación, eliminar el estigma asociado a los trastornos de ánimo y proporcionar apoyo terapéutico real a jóvenes, adultos y comunidades que más lo necesitan.
             </p>
             
-            <div className="pt-4 border-t border-gray-100">
-              <p className="text-sm text-gray-500 font-medium">
-                Organización Registrada No Profit: <span className="text-brand-primary">EIN 12-3456789</span>
+            <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center gap-4">
+              <p className="text-sm text-gray-700 font-medium">
+                Organización Benéfica Registrada <span className="mx-2">|</span> RUT: <span className="text-brand-primary">65.262.957-1</span>
               </p>
+              <a 
+                href="#donar" 
+                className="text-sm font-bold text-brand-accent hover:underline sm:ml-auto flex items-center gap-1"
+                aria-label="Conoce cómo puedes apoyarnos"
+              >
+                Conoce cómo puedes apoyarnos <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
@@ -69,8 +82,8 @@ const About: React.FC = () => {
               <div className="mb-6 p-3 bg-white rounded-2xl inline-block shadow-sm group-hover:scale-110 transition-transform">
                 {value.icon}
               </div>
-              <h4 className="text-xl font-bold mb-3 text-gray-900">{value.title}</h4>
-              <p className="text-gray-600 leading-relaxed">{value.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">{value.title}</h3>
+              <p className="text-gray-700 leading-relaxed">{value.description}</p>
             </div>
           ))}
         </div>

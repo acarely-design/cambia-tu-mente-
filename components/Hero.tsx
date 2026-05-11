@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
             <span className="text-brand-accent italic">un pensamiento</span> a la vez.
           </h1>
           
-          <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+          <p className="text-xl text-gray-700 leading-relaxed max-w-lg">
             En la Fundación Cambia tu Mente, ofrecemos arancel social para que el bienestar emocional sea accesible para todos.
           </p>
           
@@ -32,15 +32,17 @@ const Hero: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-brand-accent text-white rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl"
+              aria-label="Solicitar Atención Clínica"
             >
-              Inscríbete aquí
-              <ArrowRight size={20} />
+              Solicitar Atención Clínica
+              <ArrowRight size={20} aria-hidden="true" />
             </a>
             <a 
               href="#programas"
               className="px-8 py-4 border-2 border-brand-primary text-brand-primary rounded-full font-semibold flex items-center justify-center hover:bg-brand-primary/5 transition-all"
+              aria-label="Ver nuestros servicios y programas"
             >
-              Nuestros Programas
+              Ver Servicios
             </a>
           </div>
         </div>
@@ -48,10 +50,17 @@ const Hero: React.FC = () => {
         <div className="relative animate-fade-in delay-200">
           <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl aspect-square">
             <img 
-              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop" 
-              alt="Manos en señal de apoyo" 
+              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=70&w=800&fm=webp&auto=format&fit=crop"
+              srcSet="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=70&w=400&fm=webp&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=70&w=800&fm=webp&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=70&w=1200&fm=webp&auto=format&fit=crop 1200w"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              alt="Manos entrelazadas en señal de apoyo empático" 
+              width="800"
+              height="800"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
             />
           </div>
           {/* Decorative elements */}

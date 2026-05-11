@@ -27,7 +27,7 @@ const Donation: React.FC = () => {
               Ayúdanos a Seguir <span className="italic">Transformando</span> Mentes
             </h2>
             
-            <p className="text-xl text-white/80 leading-relaxed max-w-lg">
+            <p className="text-xl text-white/90 leading-relaxed max-w-lg">
               Cada donación se destina directamente a nuestros programas de apoyo y educación con arancel social. Tu contribución permite que sigamos ofreciendo recursos a quienes más lo necesitan.
             </p>
 
@@ -37,8 +37,8 @@ const Donation: React.FC = () => {
                   <CreditCard size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold">Donación Segura</h4>
-                  <p className="text-sm text-white/60">Procesamos tus pagos a través de plataformas encriptadas y seguras (HTTPS).</p>
+                  <h3 className="font-bold text-lg">Donación Segura</h3>
+                  <p className="text-sm text-white/90">Procesamos tus pagos a través de plataformas encriptadas y seguras (HTTPS).</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -46,8 +46,8 @@ const Donation: React.FC = () => {
                   <Globe size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold">Transparencia Total</h4>
-                  <p className="text-sm text-white/60">Publicamos informes anuales sobre el uso de cada centavo donado.</p>
+                  <h3 className="font-bold text-lg">Transparencia Total</h3>
+                  <p className="text-sm text-white/90">Publicamos informes anuales sobre el uso de cada centavo donado.</p>
                 </div>
               </div>
             </div>
@@ -61,10 +61,11 @@ const Donation: React.FC = () => {
                 <button 
                   key={index}
                   className="p-6 border-2 border-gray-100 rounded-3xl hover:border-brand-accent hover:bg-brand-accent/5 transition-all text-left group"
+                  aria-label={`Donar ${option.amount} - ${option.label}`}
                 >
                   <p className="text-2xl font-bold text-brand-accent mb-1">{option.amount}</p>
                   <p className="text-sm font-bold text-brand-primary">{option.label}</p>
-                  <p className="text-xs text-gray-500 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">{option.description}</p>
+                  <p className="text-xs text-gray-700 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">{option.description}</p>
                 </button>
               ))}
             </div>
@@ -77,14 +78,14 @@ const Donation: React.FC = () => {
                 className="w-full py-5 bg-brand-accent text-white rounded-2xl font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg flex items-center justify-center gap-2"
               >
                 Donar con Mercado Pago
-                <CreditCard size={20} />
+                <CreditCard size={20} aria-hidden="true" />
               </a>
-              <p className="text-center text-sm text-gray-500 font-medium">
+              <p className="text-center text-sm text-gray-700 font-medium">
                 Aceptamos tarjetas de crédito, débito y transferencias.
               </p>
             </div>
             
-            <p className="text-center text-xs text-gray-400 mt-6">
+            <p className="text-center text-xs text-gray-700 mt-6">
               Al donar, aceptas nuestros términos de servicio y política de privacidad.
             </p>
           </div>

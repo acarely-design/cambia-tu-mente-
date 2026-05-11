@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     { name: 'Inicio', href: '#inicio' },
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Programas', href: '#programas' },
-    { name: 'Impacto', href: '#impacto' },
+    { name: 'Apóyanos', href: '#donar' },
     { name: 'Contacto', href: '#contacto' },
   ];
 
@@ -68,8 +68,10 @@ const Header: React.FC = () => {
         <button 
           className="md:hidden text-gray-700"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={isMobileMenuOpen}
         >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isMobileMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
         </button>
       </div>
 
